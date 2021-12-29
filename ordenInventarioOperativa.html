@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #styled-table {
+            border-collapse: collapse;
+            margin: 26px 0;
+            font-size: 0.9em;
+            font-family: sans-serif;
+            min-width: 400px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
+    
+        p{
+            font-weight: bold;            
+        }
+        #styled-table thead tr {
+            background-color: #554be2;
+            color: #ffffff;
+            text-align: left;
+        }
+    
+        #styled-table th,
+        #styled-table td {
+            padding: 12px 15px;
+        }
+    
+        #styled-table th{
+            background-color: #554be2;
+            color: white;
+        }
+        #styled-table tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
+    
+        #styled-table tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+    
+        #styled-table tbody tr:last-of-type {
+            border-bottom: 2px solid #554be2;
+        }
+    
+        #styled-table tbody tr.active-row {
+            font-weight: bold;
+            color: #554be2;
+        }
+
+        #table2 {
+            border-collapse: collapse;
+            margin: 26px 0;
+            font-size: 0.9em;
+            font-family: sans-serif;
+            min-width: 400px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
+    
+        p{
+            font-family: sans-serif;                       
+	    font-weight: lighter;
+        }
+        p orden{
+            font-weight: lighter;
+        }
+        #table2 thead tr {
+            background-color: #554be2;
+            color: #ffffff;
+            text-align: left;
+        }
+    
+        #table2 th,
+        #table2 td {
+            padding: 12px 15px;
+        }
+    
+        #table2 th{
+            background-color: #6c65c9;
+            color: white;
+        }
+        #table2 tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
+    
+        #table2 tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+    
+        #table2 tbody tr:last-of-type {
+            border-bottom: 2px solid #6c65c9;
+        }
+    
+        #table2 tbody tr.active-row {
+            font-weight: bold;
+            color: #6c65c9;
+        }
+    
+        .resumen {
+            font-weight: bold;
+            font-family: sans-serif;
+    
+        }
+    </style>
+</head>
+<body>
+    <p>Nueva orden creada automáticamente por nuevo viaje en operativa</p>
+
+     <p>Fecha: @HORA</p>
+    <p id="orden">Orden: @TIPOORDEN-@ORDENID&nbsp;</p>
+    <p>Operativa: @IDOPERATIVA-@OPERATIVA</p>
+    <p>Viaje Operativo N°@VIAJE, Buque: @BUQUE</p>
+    
+</body>
+</html>
