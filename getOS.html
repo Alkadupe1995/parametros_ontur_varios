@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<script type="text/ecmascript" id="script16590">
+		
+		//Funcion para recargar la pagina sólo una vez
+		(function () {
+			if (window.localStorage) {
+				if (!localStorage.getItem('firstLoad')) {
+					localStorage['firstLoad'] = true;
+					window.location.reload();
+				}
+				else
+					localStorage.removeItem('firstLoad');
+			}
+		})();		
+
+		//Obtengo el tipo de SO
+		function getOS() {
+			var userAgent = window.navigator.userAgent, platform = window.navigator.platform, macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'], windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'], iosPlatforms = ['iPhone', 'iPad', 'iPod'], os = null;
+
+			if (macosPlatforms.indexOf(platform) !== -1) { os = 'M'; } else if (iosPlatforms.indexOf(platform) !== -1) { os = 'I'; } else if (windowsPlatforms.indexOf(platform) !== -1) { os = 'W'; } else if (/Android/.test(userAgent)) { os = 'A'; } else if (!os && /Linux/.test(platform)) { os = 'L'; }
+
+			return os;
+		}
+
+		var res = getOS();
+
+		console.log(res);
+
+		document.getElementById("OS").innerHTML = getOS();
+
+	</script>
+</body>
+
+</html>
